@@ -1,0 +1,50 @@
+<style>
+    .cartel{
+        padding-top: 50px; padding-bottom: 25; margin: 10px; background-color: blueviolet; color: white; border: 1px solid black; text-align: center;
+    }
+    .div-tabla{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    table{
+        border: 1px solid black;
+    }
+    table th{
+        background-color: lightslategray;
+    }
+</style>
+<div class="cartel">
+    <h1>Bienvenido al sistema</h1>
+    <h3>Usuario: {{nombre}}</h3>
+</div>
+
+<a href="/admin/logout">Cerrar sesion</a>
+<div class="div-tabla">    
+    <table>
+        <thead>
+            <tr>            
+                <th>nombre</th>
+                <th>raza</th>
+                <th>color</th>
+                <th>edad</th>
+                <th>sexo</th>
+                <th>fecha</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each mascotas}}
+                <tr>
+                    <td>{{this.nombre}}</td>
+                    <td>{{this.raza}}</td>
+                    <td>{{this.color}}</td>
+                    <td>{{this.edad}}</td>
+                    <td>{{this.sexo}}</td>
+                    <td>{{this.fecha}}</td>
+                    <td><button>VER</button></td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

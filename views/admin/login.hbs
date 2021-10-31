@@ -1,0 +1,26 @@
+<style>
+    .error{
+        color: red;
+    }
+    form{
+        background-color: lightsteelblue;
+    }
+</style>
+<form action="/admin/login" method="post">
+{{#if error}}
+    <p class="error">
+        {{error}}
+    </p>
+{{/if}}
+<p>
+    Usuario
+    <input type="text" name="username" id="username">
+</p>
+<p>
+    Clave
+    <input type="password" name="password" id="password">
+</p>
+
+<input type="submit" value="LOGIN">
+
+</form>
